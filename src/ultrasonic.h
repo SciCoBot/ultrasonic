@@ -35,7 +35,7 @@
 #ifndef ULTRASONIC_H
 #define ULTRASONIC_H
 
-#define ULTRASONIC_DEBUG 0
+#define ULTRASONIC_DEBUG 1
 
 #include "Arduino.h"
 
