@@ -2,7 +2,7 @@
 
 HC-SR04 is an ultrasonic sensor that measures distances from 2 to 400cm.
 
-![HC-SR04](/hcsr04.jpg)
+![HC-SR04](https://github.com/SciCoBot/ultrasonic/blob/main/images/hcsr04.jpg)
 
 This is a simple library for it!
 
