@@ -34,7 +34,7 @@
 
 #include "ultrasonic.h"
 
-#if ULTRASONIC_DEBUG == 0
+#if ULTRASONIC_DEBUG == 1
 	#include "../include/serial_debug/src/serial_debug.h"
 #endif
 
