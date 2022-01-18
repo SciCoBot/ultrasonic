@@ -1,24 +1,25 @@
 # Arduino library for HC-SR04 ultrasonic distance sensor.
 
-HC-SR04 is an ultrasonic sensor that measures distances from 2 to 400cm.
+Esta biblioteca foi criada para controlar o HC-SR0, um sensor que consegue medir obstáculos entre 2 to 400cm.
 
 ![HC-SR04](https://github.com/SciCoBot/ultrasonic/blob/main/images/hcsr04.jpg)
 
-This is a simple library for it!
+## Modo de usar
 
-## Usage
-Sensor is initialized by creating instance of class UltraSonicDistanceSensor and providing trigger and echo pins.
+Instancie um objeto da classe Ultrasonic e inicie-o:
+
 ```c
-UltraSonicDistanceSensor sensor(triggerPin, echoPin);
+Ultrasonic ultrasonic;
+ultrasonic.init(triggerPin, echoPin);
 ```
+Onde triggerPin e echoPin são os pinos do ultrassônico. Por defalt a distância máxima é definida como 400 cm, se você precisa definir outro valor, ao iniciar faça como:
 
-Default value for maximum measurement distance is 4m, since HC-SR04 sensor can't measure reliably beyond that.
-However, if you are using another sensor or if you you don't care about distances larger than some value, you can set a maximum distance in cm yourself.
 ```c
 UltraSonicDistanceSensor sensor(triggerPin, echoPin, maxDistanceCm);
 ```
 
-Besides defining max distance, you can also define max time of measurement (in micro seconds). This is important when you want to ensure your program does not block for longer than specific period of time.
+Além disso, é possível definir o tempo maximo de medição (em micro secondos), por default esse valor é 0, mas ele pode ser defindo durante a inicialização:
+
 ```c
 UltraSonicDistanceSensor sensor(triggerPin, echoPin, maxDistanceCm, absoluteTimeout);
 ```
