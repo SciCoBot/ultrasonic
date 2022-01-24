@@ -5,10 +5,10 @@
 ## Contents
 
 - [Sobre](#sobre)
-- [Comandos Básicos](#comandos-básicos
+- [Comandos Básicos](#comandos-básicos)
 - [Modo de Usar](#modo-de-usar)
 - [Como Utilizar](#como-utilizar)
-- [Possíveis Atualizações](#possíveis-atualizações)
+- [Implementaçõs Futuras](#implementaçõs-futuras)
 
 ## Sobre
 
@@ -17,6 +17,8 @@ Esta biblioteca foi criada para controlar o HC-SR4, um sensor que consegue medir
 <p align="center">
   <img src="https://github.com/SciCoBot/ultrasonic/blob/main/images/hcsr04.jpg"/ height="200" width="350">
 </p>
+
+Nota: inspirado em [arduino-lib-hc-sr04](https://github.com/Martinsos/arduino-lib-hc-sr04).
 
 ## Comandos Básicos
 ### Definições
