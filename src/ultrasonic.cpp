@@ -3,7 +3,6 @@
  *  Project     ultrassonic
  *  @brief      Arduino Due library for SR04 ultrasonic.
  *
- * It is inspired by arduino-lib-hc-sr04 (https://github.com/SciCoBot/arduino-lib-hc-sr04).
  *
  *  @author     Otávio Augusto Rocha da Cruz
  *  @bug 		 No known bugs.
