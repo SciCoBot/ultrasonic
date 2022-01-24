@@ -15,7 +15,7 @@
 Esta biblioteca foi criada para controlar o HC-SR4, um sensor que consegue medir obstáculos entre 2 to 400cm.
 
 <p align="center">
-  <img src="https://github.com/SciCoBot/ultrasonic/blob/main/images/hcsr04.jpg"/ height="200" width="350">
+  <img src="https://github.com/SciCoBot/ultrasonic/blob/main/images/hcsr04.png"/ height="200" width="350">
 </p>
 
 Nota: inspirado em [arduino-lib-hc-sr04](https://github.com/Martinsos/arduino-lib-hc-sr04).
