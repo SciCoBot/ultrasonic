@@ -1,10 +1,34 @@
-# Arduino library for HC-SR04 ultrasonic distance sensor.
+# Biblioteca Serial ultrasonic para Arduino Due
+[![platform badge](https://img.shields.io/badge/platform-Arduino-orange.svg)](https://github.com/arduino)
+[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/SciCoBot/led_debug/blob/main/LICENSE)
 
-Esta biblioteca foi criada para controlar o HC-SR0, um sensor que consegue medir obstáculos entre 2 to 400cm.
+## Contents
 
-![HC-SR04](https://github.com/SciCoBot/ultrasonic/blob/main/images/hcsr04.jpg)
+- [Sobre](#sobre)
+- [Comandos Básicos](#comandos-básicos
+- [Modo de Usar](#modo-de-usar)
+- [Como Utilizar](#como-utilizar)
+- [Possíveis Atualizações](#possíveis-atualizações)
 
-## Modo de usar
+## Sobre
+
+Esta biblioteca foi criada para controlar o HC-SR4, um sensor que consegue medir obstáculos entre 2 to 400cm.
+
+<p align="center">
+  <img src="https://github.com/SciCoBot/ultrasonic/blob/main/images/hcsr04.jpg"/ height="200" width="350">
+</p>
+
+## Comandos Básicos
+### Definições
+
+- **ULTRASONIC_DEBUG:** utilizado para habilitar ou desabilitar mensagens debug padrão. Utilize 1 para habilitar. Por default é igual a 0.
+
+### Funções:
+
+- **Ultrasonic::init():** um objeto deve primeiro ser iniciado para o correto funcionamento da biblioteca. Esta função seta os valores iniciais das variáveis de classe.
+- **Ultrasonic::measureDistanceCm():** mede e retorna a distância em centimetros, usando, por default, temperatura igual a 25 graus celsius
+
+## Modo de Usar
 
 Instancie um objeto da classe Ultrasonic e inicie-o:
 
@@ -12,7 +36,7 @@ Instancie um objeto da classe Ultrasonic e inicie-o:
 Ultrasonic ultrasonic;
 ultrasonic.init(triggerPin, echoPin);
 ```
-Onde triggerPin e echoPin são os pinos do ultrassônico. Por defalt a distância máxima é definida como 400 cm, se você precisa definir outro valor, ao iniciar faça como:
+Onde triggerPin e echoPin são os pinos do ultrassônico, conectados no Due. Por defalt, a distância máxima é definida como 400 cm, se você precisa definir outro valor, ao iniciar faça como:
 
 ```c
 UltraSonicDistanceSensor sensor(triggerPin, echoPin, maxDistanceCm);
@@ -24,35 +48,16 @@ Além disso, é possível definir o tempo maximo de medição (em micro secondos
 UltraSonicDistanceSensor sensor(triggerPin, echoPin, maxDistanceCm, absoluteTimeout);
 ```
 
-Then, to measure the distance, you just call `measureDistanceCm()`, which will return distance in centimeters (double). If distance is larger than 400cm, it will return negative value.
-
-The calculation assumes a temperature of around 20°C. For improved accuracy you may also provide a temperature yourself, either an average for your location or directly measured from another sensor. The call for a temperature of 3.5°C would as such look like this: `measureDistanceCm(3.5)`.
-
-## Example
-
-In this simple example, we need to connect sensors pins like this:
-
-- vcc to 5V
-- trig to digital pin 13
-- echo to digital pin 12
-- gnd to gnd
-
+Então, para medir a distância, basta chamar:
 ```c
-#include <HCSR04.h>
-
-// Initialize sensor that uses digital pins 13 and 12.
-const byte triggerPin = 13;
-const byte echoPin = 12;
-UltraSonicDistanceSensor distanceSensor(triggerPin, echoPin);
-
-void setup () {
-    Serial.begin(9600);  // We initialize serial connection so that we could print values from sensor.
-}
-
-void loop () {
-    // Every 500 miliseconds, do a measurement using the sensor and print the distance in centimeters.
-    float distance = distanceSensor.measureDistanceCm();
-    Serial.println(distance);
-    delay(500);
-}
+ultrasonic.measureDistanceCm()
 ```
+Se a distância retornada for maior que 400 cm, retornará -1.
+
+## Como Utilizar
+
+- Baixe.
+- Adicione a partir da IDE arduino: Sketch -> Include Library -> Add .ZIP Library... -> selecione o arquivo baixado na etapa anterior.
+- Teste o exemplo.
+
+## Implementaçõs Futuras
