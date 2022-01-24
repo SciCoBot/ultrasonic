@@ -34,10 +34,6 @@
 
 #include "ultrasonic.h"
 
-#if ULTRASONIC_DEBUG == 1
-	#include "../include/serial_debug/src/serial_debug.h"
-#endif
-
 void Ultrasonic::init(uint8_t triggerPin, uint8_t echoPin, unsigned short maxDistanceCm, unsigned long maxTimeoutMicroSec) 
 {
     _triggerPin = triggerPin;
