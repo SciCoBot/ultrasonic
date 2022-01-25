@@ -34,12 +34,14 @@
 #ifndef ULTRASONIC_H
 #define ULTRASONIC_H
 
+#include "Arduino.h"
+
 #define ULTRASONIC_DEBUG 0
 #if ULTRASONIC_DEBUG == 1
-	#include "../include/serial_debug/src/serial_debug.h"
+	#include <serial_debug.h>
 #endif
 
-#include "Arduino.h"
+
 
 class Ultrasonic{
  public:
