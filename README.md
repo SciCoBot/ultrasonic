@@ -1,8 +1,8 @@
-# Biblioteca Serial ultrasonic para Arduino Due
+# Biblioteca para sensor ultrassônico e Arduino Due
 [![platform badge](https://img.shields.io/badge/platform-Arduino-orange.svg)](https://github.com/arduino)
 [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/SciCoBot/led_debug/blob/main/LICENSE)
 
-## Contents
+## Conteúdo
 
 - [Sobre](#sobre)
 - [Comandos Básicos](#comandos-básicos)
@@ -15,7 +15,7 @@
 Esta biblioteca foi criada para controlar o HC-SR4, um sensor que consegue medir obstáculos entre 2 to 400cm.
 
 <p align="center">
-  <img src="https://github.com/SciCoBot/ultrasonic/blob/main/images/hcsr04.jpg"/ height="200" width="350">
+  <img src="https://github.com/SciCoBot/ultrasonic/blob/main/images/hcsr04.png"/ height="200" width="350">
 </p>
 
 Nota: inspirado em [arduino-lib-hc-sr04](https://github.com/Martinsos/arduino-lib-hc-sr04).
